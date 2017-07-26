@@ -34,6 +34,8 @@
 		C46356671EF9CC500080C8D9 /* SceneExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46356661EF9CC480080C8D9 /* SceneExtensions.swift */; };
 		C46356681EF9CC530080C8D9 /* VirtualObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46356651EF9CB1A0080C8D9 /* VirtualObjectManager.swift */; };
 		C4E87DD91EA6B40F002117D6 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E87DD81EA6B40F002117D6 /* VirtualObject.swift */; };
+		D4B2D2D41F29068A0025A284 /* HeyArnoldStill.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B2D2D31F29068A0025A284 /* HeyArnoldStill.png */; };
+		D4B2D2D61F290A400025A284 /* SweetVictoryStill.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B2D2D51F290A400025A284 /* SweetVictoryStill.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		C46356651EF9CB1A0080C8D9 /* VirtualObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectManager.swift; sourceTree = "<group>"; };
 		C46356661EF9CC480080C8D9 /* SceneExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneExtensions.swift; sourceTree = "<group>"; };
 		C4E87DD81EA6B40F002117D6 /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VirtualObject.swift; path = ../VirtualObject.swift; sourceTree = "<group>"; };
+		D4B2D2D31F29068A0025A284 /* HeyArnoldStill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeyArnoldStill.png; sourceTree = "<group>"; };
+		D4B2D2D51F290A400025A284 /* SweetVictoryStill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SweetVictoryStill.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +140,10 @@
 			children = (
 				2425D8BC1F290001005D58C1 /* HeyArnold.mp3 */,
 				2425D8BB1F290001005D58C1 /* HeyArnold.mp4 */,
+				D4B2D2D31F29068A0025A284 /* HeyArnoldStill.png */,
 				2425D8B91F290001005D58C1 /* SweetVictory.mp3 */,
 				2425D8BA1F290001005D58C1 /* SweetVictory.mp4 */,
+				D4B2D2D51F290A400025A284 /* SweetVictoryStill.png */,
 				3929C49E1E89EE4400E00B60 /* Models.scnassets */,
 				3929C4921E89EC2C00E00B60 /* Assets.xcassets */,
 				3929C4971E89EC2C00E00B60 /* Info.plist */,
@@ -240,7 +246,7 @@
 				TargetAttributes = {
 					3929C4871E89EC2C00E00B60 = {
 						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = 3QF9A6C73L;
+						DevelopmentTeam = W7PDGJHBGF;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -271,9 +277,11 @@
 			files = (
 				2425D8BD1F290010005D58C1 /* HeyArnold.mp3 in Resources */,
 				2425D8BE1F290010005D58C1 /* HeyArnold.mp4 in Resources */,
+				D4B2D2D61F290A400025A284 /* SweetVictoryStill.png in Resources */,
 				2425D8BF1F290010005D58C1 /* SweetVictory.mp3 in Resources */,
 				2425D8C01F290010005D58C1 /* SweetVictory.mp4 in Resources */,
 				1137ED1F1F09BE0800F1A96E /* VirtualObjects.json in Resources */,
+				D4B2D2D41F29068A0025A284 /* HeyArnoldStill.png in Resources */,
 				3929C49F1E89EE4400E00B60 /* Models.scnassets in Resources */,
 				39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */,
 				3929C4931E89EC2C00E00B60 /* Assets.xcassets in Resources */,
@@ -429,7 +437,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3QF9A6C73L;
+				DEVELOPMENT_TEAM = W7PDGJHBGF;
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitExample/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.arkit-sample-app${SAMPLE_CODE_DISAMBIGUATOR}";
@@ -448,7 +456,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3QF9A6C73L;
+				DEVELOPMENT_TEAM = W7PDGJHBGF;
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitExample/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.arkit-sample-app${SAMPLE_CODE_DISAMBIGUATOR}";

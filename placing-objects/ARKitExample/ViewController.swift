@@ -279,14 +279,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
                 self.sceneView.scene.rootNode.addChildNode(videoNode)
                 let audioSource = SCNAudioSource(fileNamed: "\(videoTitle).mp3")
                 audioSource?.shouldStream = false
-                if let audioS = audioSource{
+                if let audioS = audioSource {
                     let audioNode = SCNAudioPlayer(source: audioS)
                     print("Has Audio!")
                     videoNode.addAudioPlayer(audioNode)
                     audioNode.didFinishPlayback = {
-                        videoNode.removeFromParentNode()
+//                        videoNode.removeFromParentNode()
+                        videoNode.geometry?.firstMaterial?.diffuse.contents = UIImage(named: videoTitle + "Still.png")
                         if self.videoTitles.count > 0 {
-                            self.barcodes.remove(s)
+//                            self.barcodes.remove(s)
                             self.sceneView.session.delegate = self
                         }
                     }

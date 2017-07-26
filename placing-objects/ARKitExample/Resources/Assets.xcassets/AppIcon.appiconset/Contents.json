@@ -3,100 +3,103 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "ARKit-40.png",
+      "filename" : "nickelodeon-600x600-20@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "ARKit-60.png",
+      "filename" : "nickelodeon-600x600-20@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "ARKit-59.png",
+      "filename" : "nickelodeon-600x600-29@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "ARKit-87.png",
+      "filename" : "nickelodeon-600x600-29@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ARKit-81.png",
+      "filename" : "nickelodeon-600x600-40@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "ARKit-121.png",
+      "filename" : "nickelodeon-600x600-40@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "ARKit-120.png",
+      "filename" : "nickelodeon-600x600-60@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "ARKit-180.png",
+      "filename" : "nickelodeon-600x600-60@3x.png",
       "scale" : "3x"
     },
     {
-      "idiom" : "ipad",
       "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "nickelodeon-600x600-20.png",
       "scale" : "1x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "ARKit-41.png",
+      "filename" : "nickelodeon-600x600-20@2x.png",
       "scale" : "2x"
-    },
-    {
-      "idiom" : "ipad",
-      "size" : "29x29",
-      "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "ARKit-58.png",
+      "filename" : "nickelodeon-600x600-29.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "nickelodeon-600x600-29@2x.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "nickelodeon-600x600-40.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "ARKit-80.png",
+      "filename" : "nickelodeon-600x600-40@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "ARKit-76.png",
+      "filename" : "nickelodeon-600x600-76.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "ARKit-152.png",
+      "filename" : "nickelodeon-600x600-76@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "ARKit-167.png",
+      "filename" : "nickelodeon-600x600-83.5@2x.png",
       "scale" : "2x"
     },
     {
