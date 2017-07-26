@@ -8,10 +8,18 @@ Main view controller for the AR experience.
 import ARKit
 import Foundation
 import SceneKit
+import SpriteKit
+import Vision
 import UIKit
 import Photos
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
+    
+    var scaleTransform: CGAffineTransform!
+    var barcodes: Set<String> = []
+    let recognitionQueue = DispatchQueue(label: "Recognition")
+    var videoNode: SCNNode?
+    var videoTitles = ["HeyArnold", "SweetVictory"]
     
     // MARK: - ARKit Config Properties
     
@@ -106,6 +114,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 		sceneView.setup()
 		sceneView.delegate = self
 		sceneView.session = session
+        sceneView.session.delegate = self
+        sceneView.session.delegateQueue = recognitionQueue
+        
+        scaleTransform = CGAffineTransform.init(scaleX: self.sceneView.frame.size.width, y: self.sceneView.frame.height)
 		// sceneView.showsStatistics = true
 		
 		sceneView.scene.enableEnvironmentMapWithIntensity(25, queue: serialQueue)
@@ -222,6 +234,80 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 		restartExperience(self)
 		textManager.showMessage("RESETTING SESSION")
 	}
+    
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        
+        let barcodeRequest = VNDetectBarcodesRequest { (request, error) in
+            guard let result = request.results?.first as? VNBarcodeObservation, let qrCode = result.barcodeDescriptor as? CIQRCodeDescriptor else { return }
+            let str = String(data: qrCode.errorCorrectedPayload, encoding: .ascii)
+            guard let s = str else { return }
+            guard !self.barcodes.contains(s) else { return }
+            
+            let newResult = result.topLeft.applying(self.scaleTransform)
+            print(newResult)
+            let resultingPosition = self.virtualObjectManager.worldPositionFromScreenPosition(newResult, in: self.sceneView, objectPos: nil)
+            guard let position = resultingPosition.position else { return }
+            DispatchQueue.main.async {
+                //                let nodePlane = SCNPlane(width: 1, height: 1)
+                //                let node = SCNNode(geometry: nodePlane)
+                //                node.position = SCNVector3Make(position.x, position.y, position.z)
+                //
+                //
+                guard let videoTitle = self.videoTitles.first else {
+                    self.sceneView.session.delegate = nil
+                    return
+                }
+                guard let url = Bundle.main.url(forResource: videoTitle, withExtension: "mp4") else { return }
+                let spriteKitScene = SKScene(size: CGSize(width: 1276.0 / 2.0, height: 712.0 / 2.0))
+                let videoSpritKitNode = SKVideoNode(url: url)
+                let videoNode = SCNNode()
+                
+                videoNode.position = SCNVector3Make(position.x, position.y, position.z)
+                
+                videoNode.geometry = SCNPlane(width: 0.3, height: 0.3)
+                
+                spriteKitScene.scaleMode = .aspectFit
+                
+                videoSpritKitNode.position = CGPoint(x: spriteKitScene.size.width / 2.0, y: spriteKitScene.size.height / 2.0)
+                videoSpritKitNode.size = spriteKitScene.size
+                spriteKitScene.addChild(videoSpritKitNode)
+                videoNode.geometry?.firstMaterial?.diffuse.contents = spriteKitScene
+                videoNode.geometry?.firstMaterial?.isDoubleSided = true
+                videoSpritKitNode.yScale = -1
+                self.sceneView.session.delegate = nil
+                self.barcodes.insert(s)
+                self.sceneView.scene.rootNode.addChildNode(videoNode)
+                let audioSource = SCNAudioSource(fileNamed: "\(videoTitle).mp3")
+                audioSource?.shouldStream = false
+                if let audioS = audioSource{
+                    let audioNode = SCNAudioPlayer(source: audioS)
+                    print("Has Audio!")
+                    videoNode.addAudioPlayer(audioNode)
+                    audioNode.didFinishPlayback = {
+                        videoNode.removeFromParentNode()
+                        if self.videoTitles.count > 0 {
+                            self.barcodes.remove(s)
+                            self.sceneView.session.delegate = self
+                        }
+                    }
+                }
+                self.videoTitles.removeFirst()
+                videoSpritKitNode.play()
+                print("added node")
+                self.videoNode = videoNode
+            }
+        }
+        
+        let pixelBuffer = frame.capturedImage
+        recognitionQueue.async {
+            do {
+                try VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([barcodeRequest])
+            } catch {
+                print(error)
+            }
+        }
+        
+    }
 	
     // MARK: - Gesture Recognizers
 	

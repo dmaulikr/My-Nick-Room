@@ -15,6 +15,10 @@
 		148832431EFC3BE00043E0AB /* SingleFingerGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148832421EFC3BE00043E0AB /* SingleFingerGesture.swift */; };
 		148832451EFC3C160043E0AB /* TwoFingerGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148832441EFC3C160043E0AB /* TwoFingerGesture.swift */; };
 		148832491EFC3E520043E0AB /* ARSCNView+HitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148832481EFC3E520043E0AB /* ARSCNView+HitTests.swift */; };
+		2425D8BD1F290010005D58C1 /* HeyArnold.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2425D8BC1F290001005D58C1 /* HeyArnold.mp3 */; };
+		2425D8BE1F290010005D58C1 /* HeyArnold.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2425D8BB1F290001005D58C1 /* HeyArnold.mp4 */; };
+		2425D8BF1F290010005D58C1 /* SweetVictory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2425D8B91F290001005D58C1 /* SweetVictory.mp3 */; };
+		2425D8C01F290010005D58C1 /* SweetVictory.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2425D8BA1F290001005D58C1 /* SweetVictory.mp4 */; };
 		3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */; };
 		3929C48E1E89EC2C00E00B60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48D1E89EC2C00E00B60 /* ViewController.swift */; };
 		3929C4911E89EC2C00E00B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3929C48F1E89EC2C00E00B60 /* Main.storyboard */; };
@@ -42,6 +46,10 @@
 		148832421EFC3BE00043E0AB /* SingleFingerGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFingerGesture.swift; sourceTree = "<group>"; };
 		148832441EFC3C160043E0AB /* TwoFingerGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFingerGesture.swift; sourceTree = "<group>"; };
 		148832481EFC3E520043E0AB /* ARSCNView+HitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARSCNView+HitTests.swift"; sourceTree = "<group>"; };
+		2425D8B91F290001005D58C1 /* SweetVictory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = SweetVictory.mp3; path = ../../../SelskyProj/ARTest/SweetVictory.mp3; sourceTree = "<group>"; };
+		2425D8BA1F290001005D58C1 /* SweetVictory.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = SweetVictory.mp4; path = ../../../SelskyProj/ARTest/SweetVictory.mp4; sourceTree = "<group>"; };
+		2425D8BB1F290001005D58C1 /* HeyArnold.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = HeyArnold.mp4; path = ../../../SelskyProj/ARTest/HeyArnold.mp4; sourceTree = "<group>"; };
+		2425D8BC1F290001005D58C1 /* HeyArnold.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = HeyArnold.mp3; path = ../../../SelskyProj/ARTest/HeyArnold.mp3; sourceTree = "<group>"; };
 		3929C4881E89EC2C00E00B60 /* ARKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3929C48D1E89EC2C00E00B60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +134,10 @@
 		1488324C1EFC3ED00043E0AB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2425D8BC1F290001005D58C1 /* HeyArnold.mp3 */,
+				2425D8BB1F290001005D58C1 /* HeyArnold.mp4 */,
+				2425D8B91F290001005D58C1 /* SweetVictory.mp3 */,
+				2425D8BA1F290001005D58C1 /* SweetVictory.mp4 */,
 				3929C49E1E89EE4400E00B60 /* Models.scnassets */,
 				3929C4921E89EC2C00E00B60 /* Assets.xcassets */,
 				3929C4971E89EC2C00E00B60 /* Info.plist */,
@@ -228,7 +240,7 @@
 				TargetAttributes = {
 					3929C4871E89EC2C00E00B60 = {
 						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = 9W65Q33XUR;
+						DevelopmentTeam = 3QF9A6C73L;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -257,6 +269,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2425D8BD1F290010005D58C1 /* HeyArnold.mp3 in Resources */,
+				2425D8BE1F290010005D58C1 /* HeyArnold.mp4 in Resources */,
+				2425D8BF1F290010005D58C1 /* SweetVictory.mp3 in Resources */,
+				2425D8C01F290010005D58C1 /* SweetVictory.mp4 in Resources */,
 				1137ED1F1F09BE0800F1A96E /* VirtualObjects.json in Resources */,
 				3929C49F1E89EE4400E00B60 /* Models.scnassets in Resources */,
 				39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */,
@@ -413,7 +429,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9W65Q33XUR;
+				DEVELOPMENT_TEAM = 3QF9A6C73L;
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitExample/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.arkit-sample-app${SAMPLE_CODE_DISAMBIGUATOR}";
@@ -432,7 +448,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9W65Q33XUR;
+				DEVELOPMENT_TEAM = 3QF9A6C73L;
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitExample/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.arkit-sample-app${SAMPLE_CODE_DISAMBIGUATOR}";
