@@ -8,6 +8,7 @@
 
 import UIKit
 import SceneKit
+import SceneKit.ModelIO
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
@@ -24,10 +25,94 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+//        let scene = SCNScene(named: "art.scnassets/raph.scn")!
+//        let scene = SCNScene(named: "art.scnassets/leo.scn")!
+//        let scene = SCNScene(named: "art.scnassets/spongebob2.scn")!
+
+//        let scene = SCNScene()
+//        var raphGeometry : SCNGeometry
+//        let tempScene = SCNScene(named: "art.scnassets/raph.scn")
+//        raphGeometry = tempScene!.rootNode.childNodes.first!.geometry!
+//        let material = SCNMaterial()
+//        material.metalness.contents = UIImage(named: "TN_Raph_Metal_C.tif")
+////        material.diffuse.contents = UIImage(named: "texture.jpg")
+//        raphGeometry.materials = [material]
+//        let raphNode = SCNNode(geometry: raphGeometry)
+//        scene.rootNode.addChildNode(raphNode)
+//
+        //-----
+        let bundle = Bundle.main
+        let path = bundle.path(forResource: "spongebob", ofType: "obj")
+        let url = URL(fileURLWithPath: path!)
+        let asset = MDLAsset(url: url)
+        //-----
+//
+////        let url = URL(string: "Raph/OBJ/Raph.obj")
+////        let asset = MDLAsset(url: url!)
+////        let object = asset.object(at: 0)
+////        let node = SCNNode(mdlObject: object)
+//
+//        
+//        
+////        let scene = SCNScene(named: "Raph.obj")
+        let scene = SCNScene(mdlAsset: asset)
+////        scene.rootNode.addChildNode(node)
+//        
+//        
+//        
         
         // Set the scene to the view
         sceneView.scene = scene
+        
+        
+//
+//        // Load the .OBJ file
+//        guard let url = Bundle.main.url(forResource: "Raph", withExtension: "obj") else {
+//            fatalError("Failed to find model file.")
+//        }
+//
+//        let asset = MDLAsset(url: url)
+//        guard let object = asset.object(at: 0) as? MDLMesh else {
+//            fatalError("Failed to get mesh from asset.")
+//        }
+//
+//        // Create a material from the various textures
+//        let scatteringFunction = MDLScatteringFunction()
+//        let material = MDLMaterial(name: "baseMaterial", scatteringFunction: scatteringFunction)
+//
+//        material.setTextureProperties([
+//            .BaseColor:"Fighter_Diffuse_25.jpg",
+//            .Specular:"Fighter_Specular_25.jpg",
+//            .Emission:"Fighter_Illumination_25.jpg"])
+//
+//        // Apply the texture to every submesh of the asset
+//        for submesh in object.submeshes!  {
+//            if let submesh = submesh as? MDLSubmesh {
+//                submesh.material = material
+//            }
+//        }
+//
+//        // Wrap the ModelIO object in a SceneKit object
+//        let node = SCNNode(mdlObject: object)
+//        let scene = SCNScene()
+//        scene.rootNode.addChildNode(node)
+//
+//        // Set up the SceneView
+//        sceneView.scene = scene
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

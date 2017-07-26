@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4B2D2D01F28ECCD0025A284 /* spongebob.obj in Resources */ = {isa = PBXBuildFile; fileRef = D4B2D2CD1F28ECCC0025A284 /* spongebob.obj */; };
+		D4B2D2D11F28ECCD0025A284 /* spongebob_d.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B2D2CE1F28ECCC0025A284 /* spongebob_d.png */; };
+		D4B2D2D21F28ECCD0025A284 /* spongebob.mtl in Resources */ = {isa = PBXBuildFile; fileRef = D4B2D2CF1F28ECCC0025A284 /* spongebob.mtl */; };
 		D4D327F21F27A39F0087F8DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D327F11F27A39F0087F8DB /* AppDelegate.swift */; };
 		D4D327F41F27A39F0087F8DB /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D327F31F27A39F0087F8DB /* art.scnassets */; };
 		D4D327F61F27A39F0087F8DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D327F51F27A39F0087F8DB /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4B2D2CD1F28ECCC0025A284 /* spongebob.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spongebob.obj; sourceTree = "<group>"; };
+		D4B2D2CE1F28ECCC0025A284 /* spongebob_d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spongebob_d.png; sourceTree = "<group>"; };
+		D4B2D2CF1F28ECCC0025A284 /* spongebob.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spongebob.mtl; sourceTree = "<group>"; };
 		D4D327EE1F27A39F0087F8DB /* MyNickRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNickRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D327F11F27A39F0087F8DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D327F31F27A39F0087F8DB /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -57,14 +63,25 @@
 			isa = PBXGroup;
 			children = (
 				D4D327F11F27A39F0087F8DB /* AppDelegate.swift */,
+				D4B2D2CE1F28ECCC0025A284 /* spongebob_d.png */,
+				D4B2D2CF1F28ECCC0025A284 /* spongebob.mtl */,
+				D4B2D2CD1F28ECCC0025A284 /* spongebob.obj */,
 				D4D327F31F27A39F0087F8DB /* art.scnassets */,
 				D4D327F51F27A39F0087F8DB /* ViewController.swift */,
 				D4D327F71F27A39F0087F8DB /* Main.storyboard */,
 				D4D327FA1F27A39F0087F8DB /* Assets.xcassets */,
 				D4D327FC1F27A39F0087F8DB /* LaunchScreen.storyboard */,
 				D4D327FF1F27A39F0087F8DB /* Info.plist */,
+				D4FD472E1F27C2BC00AF8BCA /* TMNT */,
 			);
 			path = MyNickRoom;
+			sourceTree = "<group>";
+		};
+		D4FD472E1F27C2BC00AF8BCA /* TMNT */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TMNT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +143,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D327F41F27A39F0087F8DB /* art.scnassets in Resources */,
+				D4B2D2D01F28ECCD0025A284 /* spongebob.obj in Resources */,
+				D4B2D2D11F28ECCD0025A284 /* spongebob_d.png in Resources */,
 				D4D327FE1F27A39F0087F8DB /* LaunchScreen.storyboard in Resources */,
+				D4B2D2D21F28ECCD0025A284 /* spongebob.mtl in Resources */,
 				D4D327FB1F27A39F0087F8DB /* Assets.xcassets in Resources */,
 				D4D327F91F27A39F0087F8DB /* Main.storyboard in Resources */,
 			);
