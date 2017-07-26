@@ -264,7 +264,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
                 
                 videoNode.position = SCNVector3Make(position.x, position.y, position.z)
                 
-                videoNode.geometry = SCNPlane(width: 0.3, height: 0.3)
+                videoNode.geometry = SCNPlane(width: 2, height: 1)
                 
                 spriteKitScene.scaleMode = .aspectFit
                 
@@ -274,11 +274,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
                 videoNode.geometry?.firstMaterial?.diffuse.contents = spriteKitScene
                 videoNode.geometry?.firstMaterial?.isDoubleSided = true
                 videoSpritKitNode.yScale = -1
+                videoNode.eulerAngles = self.sceneView.pointOfView?.eulerAngles ?? videoNode.eulerAngles
                 self.sceneView.session.delegate = nil
                 self.barcodes.insert(s)
                 self.sceneView.scene.rootNode.addChildNode(videoNode)
                 let audioSource = SCNAudioSource(fileNamed: "\(videoTitle).mp3")
                 audioSource?.shouldStream = false
+                
                 if let audioS = audioSource {
                     let audioNode = SCNAudioPlayer(source: audioS)
                     print("Has Audio!")
@@ -286,6 +288,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
                     audioNode.didFinishPlayback = {
 //                        videoNode.removeFromParentNode()
                         videoNode.geometry?.firstMaterial?.diffuse.contents = UIImage(named: videoTitle + "Still.png")
+
                         if self.videoTitles.count > 0 {
 //                            self.barcodes.remove(s)
                             self.sceneView.session.delegate = self
